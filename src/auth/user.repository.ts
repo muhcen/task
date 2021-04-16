@@ -1,7 +1,6 @@
 import { EntityRepository, Repository } from "typeorm";
 import { User } from "./user.entity";
 import * as bcrypt from "bcrypt";
-import { use } from "passport";
 import { NotAcceptableException, NotFoundException } from "@nestjs/common";
 
 @EntityRepository(User)

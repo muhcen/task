@@ -1,6 +1,5 @@
 import { Controller, Get, Req, UseGuards } from '@nestjs/common';
 import { MessagePattern } from '@nestjs/microservices';
-import { AuthGuard } from '@nestjs/passport';
 import { AuthService } from './auth.service';
 import { User } from './user.entity';
 
