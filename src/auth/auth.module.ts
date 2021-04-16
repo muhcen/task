@@ -21,8 +21,8 @@ TypeOrmModule.forFeature([UserRepository]),
 ],
   controllers: [AuthController],
   providers: [
+    JwtStrtegy,
     AuthService,
-    JwtStrtegy
   ]
   ,
   exports:[JwtStrtegy,PassportModule]
