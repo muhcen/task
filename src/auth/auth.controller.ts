@@ -18,9 +18,4 @@ export class AuthController {
         return await this.authService.logIn(authCredentialsDto);
     }
 
-    @UseGuards(AuthGuard())
-    @Post('/test')
-    async test(@Req() req){
-        console.log(req)
-    }
 }

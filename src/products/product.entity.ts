@@ -1,5 +1,4 @@
 import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
-import { ProductStatus } from "./product-status.enum";
 
 
 @Entity()
@@ -14,8 +13,7 @@ export class Product extends BaseEntity {
     price:number
 
     @Column()
-    describe : string
+    describtion : string
     
-    @Column()
-    status:ProductStatus
+
 }
