@@ -18,4 +18,16 @@ export class UserCredential{
     password: string
     @IsString()
     role: UserRole
+} 
+
+
+export class AuthCredentialsDto{
+    @MinLength(8)
+    @MaxLength(20)
+    @IsString()
+    email: string
+    @MinLength(8)
+    @MaxLength(20)
+    @IsString()
+    password: string
 }

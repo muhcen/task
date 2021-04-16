@@ -1,6 +1,6 @@
 import { Body, Controller, Inject, Post, ValidationPipe } from '@nestjs/common';
 import { ClientProxy } from '@nestjs/microservices';
-import { UserCredential } from './dto/userCredential.dto';
+import { AuthCredentialsDto, UserCredential } from './dto/userCredential.dto';
 
 @Controller('users')
 export class UsersController {
@@ -11,5 +11,10 @@ export class UsersController {
     @Post('/signUp')
     signUp(@Body(ValidationPipe) userCredential : UserCredential){
         return this.client.send('signUp',userCredential) 
+    }
+
+    @Post('/logIn')
+    logIn(@Body(ValidationPipe) authCredentialsDto : AuthCredentialsDto){
+        return this.client.send('logIn',authCredentialsDto) 
     }
 }
