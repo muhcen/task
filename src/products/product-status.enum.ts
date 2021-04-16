@@ -1,6 +1,6 @@
 
 
-export enum ProductStatus{
+export enum OrderStatus{
     OPEN='OPEN',
     DONE='DONE'
 }
