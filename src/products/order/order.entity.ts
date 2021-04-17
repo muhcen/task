@@ -9,11 +9,10 @@ export class Order extends BaseEntity {
     
     @PrimaryGeneratedColumn()
     id:number 
-    @ManyToOne(type => User , user => user.id)
-    id_user:string
-    @ManyToOne(type => Product , product => product.id)
-    id_product:string
+    @ManyToOne(() => User , user => user.id,{eager:false})
+    user:User
+    @ManyToOne(() => Product , product => product.id)
+    id_product:Product
     @Column()
     status:OrderStatus
-
 }
