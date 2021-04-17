@@ -14,7 +14,6 @@ export class UserRepository extends Repository<User>{
         user.salt = salt;
         user.email = email;
         user.name = name;
-        console.log(await this.hashPassword(password,salt))
         user.password = await this.hashPassword(password,salt);
         user.role = role;
 
@@ -24,7 +23,6 @@ export class UserRepository extends Repository<User>{
             await user.save();
             return user
         } catch (error) {
-            console.log(error);
             return error.detail
         }
     }

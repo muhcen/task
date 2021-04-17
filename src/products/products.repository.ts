@@ -1,4 +1,5 @@
 import { EntityRepository, Repository } from "typeorm";
+import { OrderStatus } from "./product-status.enum";
 import { Product } from "./product.entity";
 import { ProductsCredentialsDto } from "./productsCredentials.dto";
 
@@ -22,4 +23,6 @@ export class ProductRepository extends Repository<Product>{
         }        
 
     }
+
+
 }

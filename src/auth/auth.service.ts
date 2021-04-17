@@ -22,7 +22,6 @@ export class AuthService {
 
     async logIn(authCredentialsDto:AuthCredentialsDto):Promise<{token:string}>{
         const email = await this.userRepository.logIn(authCredentialsDto);
-        console.log(email)
         if(!email){
             throw new UnauthorizedException('Invalid credentials')
         }
